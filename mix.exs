@@ -10,10 +10,10 @@ defmodule BecariosBunsan2022B1.MixProject do
       deps: deps(),
       test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [
-      coveralls: :test,
-      "coveralls.detail": :test,
-      "coveralls.post": :test,
-      "coveralls.html": :test
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
       ]
     ]
   end
@@ -33,8 +33,8 @@ defmodule BecariosBunsan2022B1.MixProject do
       {:sweet_xml, "~> 0.7.2"},
       {:libgraph, "~> 0.13.3"},
       {:tzdata, "~> 1.1"},
-      {:excoveralls, "~> 0.10", only: :test}
-
+      {:excoveralls, "~> 0.10", only: :test},
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
   end
 end
