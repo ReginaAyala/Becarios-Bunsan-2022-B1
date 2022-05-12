@@ -3,7 +3,8 @@ defmodule GitHub do
   
     def user_repos(client, login) do
       # pass `client` argument to `Tesla.get` function
-      Tesla.get(client, "/users/" <> login <> "/repos")
+      {:ok, response} = Tesla.get(client, "/users/" <> login <> "/repos")
+      repos_name = response.body |> Enum.map(fn x -> Map.get(x, "name") end)
     end
   
     def issues(client) do
@@ -21,20 +22,27 @@ defmodule GitHub do
       Tesla.client(middleware, adapter)
     end
 
-    def get_repo(client, user_name, repo_name) do
+    def repo_info(client, user_name, repo_name) do
       {:ok, response} = Tesla.get(client, "/repos/" <> user_name <> "/" <> repo_name)
       name_owner = response.body |> Map.get("owner") |> Map.get("login")
+      name_repo = response.body |> Map.get("name")
 
       {:ok, response} = Tesla.get(client, "/repos/" <> user_name <> "/" <> repo_name <> "/languages")
       language = response.body |> Enum.map(fn {k, _} -> k end)
 
       {:ok, response} = Tesla.get(client, "/repos/" <> user_name <> "/" <> repo_name <> "/commits") 
       num_commits = response.body |> length()
+
+
       
-      %{"Name owner": name_owner,
-        "language": language,
-        "Num commits": num_commits}
-      
+      %{owner: name_owner,
+        language: language,
+        commits: num_commits,
+        repo: name_repo
+      } 
     end
+
+
+
     
   end
