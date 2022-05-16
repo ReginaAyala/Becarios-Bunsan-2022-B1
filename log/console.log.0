@@ -1,0 +1,38 @@
+2022-05-15 21:14:25.316 [info] <0.44.0> Application lager started on node nonode@nohost
+2022-05-15 21:14:25.322 [info] <0.44.0> Application sasl started on node nonode@nohost
+2022-05-15 21:14:25.322 [info] <0.44.0> Application tools started on node nonode@nohost
+2022-05-15 21:14:25.322 [info] <0.44.0> Application jsx started on node nonode@nohost
+2022-05-15 21:14:25.322 [info] <0.44.0> Application recon started on node nonode@nohost
+2022-05-15 21:14:25.383 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2022-05-15 21:14:25.383 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2022-05-15 21:14:25.389 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2022-05-15 21:14:25.392 [info] <0.44.0> Application amqp started on node nonode@nohost
+2022-05-15 21:14:25.392 [info] <0.44.0> Application becarios_bunsan_2022_b1 started on node nonode@nohost
+2022-05-15 21:15:52.171 [info] <0.44.0> Application logger started on node nonode@nohost
+2022-05-15 21:15:52.174 [info] <0.44.0> Application becarios_bunsan_2022_b1 started on node nonode@nohost
+2022-05-15 21:35:48.555 [info] <0.44.0> Application logger started on node nonode@nohost
+2022-05-15 21:35:48.558 [info] <0.44.0> Application becarios_bunsan_2022_b1 started on node nonode@nohost
+2022-05-15 21:47:26.120 [error] <0.341.0> gen_server <0.341.0> terminated with reason: {socket_error,timeout}
+2022-05-15 21:47:26.120 [error] <0.335.0> gen_server <0.335.0> terminated with reason: {socket_error,timeout}
+2022-05-15 21:47:26.120 [error] <0.341.0> CRASH REPORT Process <0.341.0> with 0 neighbours exited with reason: {socket_error,timeout} in gen_server:handle_common_reply/8 line 811
+2022-05-15 21:47:26.120 [error] <0.335.0> CRASH REPORT Process <0.335.0> with 0 neighbours exited with reason: {socket_error,timeout} in gen_server:handle_common_reply/8 line 811
+2022-05-15 21:47:26.120 [error] <0.333.0> Supervisor {<0.333.0>,amqp_connection_sup} had child connection started with amqp_gen_connection:start_link(<0.334.0>, {amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,...}) at <0.335.0> exit with reason {socket_error,timeout} in context child_terminated
+2022-05-15 21:47:26.121 [error] <0.333.0> Supervisor {<0.333.0>,amqp_connection_sup} had child connection started with amqp_gen_connection:start_link(<0.334.0>, {amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,...}) at <0.335.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-15 21:47:26.121 [error] <0.334.0> Supervisor {<0.334.0>,amqp_connection_type_sup} had child main_reader started with amqp_main_reader:start_link(#Port<0.6>, <0.335.0>, <0.339.0>, {method,rabbit_framing_amqp_0_9_1}, <<"client 127.0.0.1:54263 -> 127.0.0.1:5672">>) at <0.341.0> exit with reason {socket_error,timeout} in context child_terminated
+2022-05-15 21:47:26.121 [error] <0.334.0> Supervisor {<0.334.0>,amqp_connection_type_sup} had child main_reader started with amqp_main_reader:start_link(#Port<0.6>, <0.335.0>, <0.339.0>, {method,rabbit_framing_amqp_0_9_1}, <<"client 127.0.0.1:54263 -> 127.0.0.1:5672">>) at <0.341.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-15 23:04:29.492 [info] <0.44.0> Application logger started on node nonode@nohost
+2022-05-15 23:04:29.494 [info] <0.44.0> Application becarios_bunsan_2022_b1 started on node nonode@nohost
+2022-05-15 23:38:16.010 [info] <0.44.0> Application logger started on node nonode@nohost
+2022-05-15 23:38:16.012 [info] <0.44.0> Application becarios_bunsan_2022_b1 started on node nonode@nohost
+2022-05-15 23:39:07.685 [error] emulator Error in process <0.389.0> with exit value:
+{undef,[{'Elixir.RabbitMQ.Consumer',wait_for_messages,[#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.376.0>},custom_consumer => nil,pid => <0.387.0>}],[]}]}
+2022-05-15 23:39:07.685 [error] <0.386.0> gen_server <0.386.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-15 23:39:07.685 [error] <0.386.0> CRASH REPORT Process <0.386.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-15 23:39:07.685 [error] <0.385.0> Supervisor {<0.385.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:54875 -> 127.0.0.1:5672">>,1}) at <0.386.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-15 23:39:07.685 [error] <0.385.0> Supervisor {<0.385.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:54875 -> 127.0.0.1:5672">>,1}) at <0.386.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-15 23:42:57.359 [error] emulator Error in process <0.421.0> with exit value:
+{undef,[{'Elixir.RabbitMQ.Consumer',wait_for_messages,[#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.410.0>},custom_consumer => nil,pid => <0.419.0>}],[]}]}
+2022-05-15 23:43:39.129 [info] <0.44.0> Application logger started on node nonode@nohost
+2022-05-15 23:43:39.130 [info] <0.44.0> Application becarios_bunsan_2022_b1 started on node nonode@nohost
+2022-05-15 23:58:35.303 [info] <0.44.0> Application logger started on node nonode@nohost
+2022-05-15 23:58:35.305 [info] <0.44.0> Application becarios_bunsan_2022_b1 started on node nonode@nohost

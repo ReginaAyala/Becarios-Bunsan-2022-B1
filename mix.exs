@@ -21,7 +21,7 @@ defmodule BecariosBunsan2022B1.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      applications: [:amqp, :logger]
     ]
   end
 
@@ -36,7 +36,8 @@ defmodule BecariosBunsan2022B1.MixProject do
       {:excoveralls, "~> 0.10", only: :test},
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
       {:tesla, "~> 1.4.0"},
-      {:hackney, "~> 1.10"}
+      {:hackney, "~> 1.10"},
+      {:amqp, "~> 1.0"}
     ]
   end
 end

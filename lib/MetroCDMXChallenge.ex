@@ -12,7 +12,7 @@ defmodule MetroCDMXChallenge do
     """
     defstruct [:name, :stations]
   end
-    
+
   defmodule Station do
     @moduledoc """
     relate the name with the coordinate

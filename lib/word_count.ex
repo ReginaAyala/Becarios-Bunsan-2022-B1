@@ -1,8 +1,8 @@
 defmodule WordCount do
-@moduledoc """
-  This is the WordCount.
-  It is charge from count all the words in a text
-"""
+  @moduledoc """
+    This is the WordCount.
+    It is charge from count all the words in a text
+  """
   def count(ruta) do
     {:ok, archivo} = File.read(ruta)
 
